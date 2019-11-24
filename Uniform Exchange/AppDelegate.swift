@@ -11,12 +11,29 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var strAppName : String?
+    var strServerURL : String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Call Config Method
+        GlobalConfig.setConfigDataFromPathConfig()
+        
+        //set app config
+        self.setAppConfig()
+        
         return true
     }
+    
+    //MARK: - Read Path Config
+    
+    func setAppConfig() {
+        //access the values in the dictionary
+        strAppName = GlobalConfig.sharedInstance.dicPathConfig?["App-Name"] as? String ?? ""
+        strServerURL = GlobalConfig.sharedInstance.dicPathConfig?["Server-Config"]!["Server-URL"] as? String ?? ""
+    }
+
 
     // MARK: UISceneSession Lifecycle
 
@@ -32,6 +49,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    
+    //MARK:- Encode characters for special characters
+    
+    func encodeJsonDataWithValues(jsonData : Data) -> Data {
+        let jsonString : String = String.init(data: jsonData, encoding: .utf8) ?? ""
+        //convert into special characters
+        let convertedJsonString = jsonString.convertSpecialCharacter()
+        
+        let convertedJSONData = (convertedJsonString?.data(using: .utf8))!
+        
+        var jsonData : Data = "values=".data(using: String.Encoding.utf8)!
+        //Append data
+        jsonData.append(convertedJSONData)
+        
+        return jsonData
+    }
+    
+    func encodeJsonData(jsonData : Data) -> Data {
+        let jsonString : String = String.init(data: jsonData, encoding: .utf8) ?? ""
+        //convert into special characters
+        let convertedJsonString = jsonString.convertSpecialCharacter()
+        
+        let convertedJSONData = (convertedJsonString?.data(using: .utf8))!
+        
+        return convertedJSONData
+    }
 
 }
 

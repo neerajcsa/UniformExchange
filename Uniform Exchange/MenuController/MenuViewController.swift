@@ -13,6 +13,7 @@ class MenuViewController: UIViewController {
     //MARK:- Properties Declaration
     
     @IBOutlet weak var otlTableView : UITableView?
+    var delegate: HomeControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -19,22 +19,36 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6nx-Jx-WUs">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pCp-Vb-UfK">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pCp-Vb-UfK">
                                     <size key="itemSize" width="414" height="225"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HOME_COLLECTION_CELL" id="DLb-nY-zWF" customClass="HomeCollectionCell" customModule="Uniform_Exchange" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="HOME_COLLECTION_CELL" id="DLb-nY-zWF" customClass="HomeCollectionCell" customModule="Uniform_Exchange" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="225"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RO6-XN-pLO">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="RO6-XN-pLO">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="225"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skyblue_dress" translatesAutoresizingMaskIntoConstraints="NO" id="1Ch-Ko-osr">
+                                                    <rect key="frame" x="16" y="0.0" width="382" height="225"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="1Ch-Ko-osr" secondAttribute="bottom" id="5PV-Lg-cR0"/>
+                                                <constraint firstItem="1Ch-Ko-osr" firstAttribute="top" secondItem="RO6-XN-pLO" secondAttribute="top" id="9bF-nd-uCI"/>
+                                                <constraint firstItem="1Ch-Ko-osr" firstAttribute="leading" secondItem="RO6-XN-pLO" secondAttribute="leading" constant="16" id="dE1-3X-nc8"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Ch-Ko-osr" secondAttribute="trailing" constant="16" id="ocJ-71-8Y4"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <size key="customSize" width="414" height="225"/>
+                                        <connections>
+                                            <outlet property="otlImageView" destination="1Ch-Ko-osr" id="FqQ-S7-WcW"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -60,6 +74,10 @@
                     <navigationItem key="navigationItem" title="UNIFORM EXCHANGE" id="2hs-8H-M3a">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="BhP-1E-sKY"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="otlCollectionView" destination="6nx-Jx-WUs" id="Be9-WE-lwh"/>
+                        <outlet property="otlProgressView" destination="hfg-6Q-luw" id="T0q-Ar-nrV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhq-eX-3vd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,5 +101,53 @@
             </objects>
             <point key="canvasLocation" x="-1048" y="56"/>
         </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="PjZ-oo-hRL">
+            <objects>
+                <viewController storyboardIdentifier="MENU_VIEW_ID" id="KTh-SF-7dY" customClass="MenuViewController" customModule="Uniform_Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6RO-na-c2W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="RuO-ex-K8X">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MENU_CELL" id="7oU-i4-cXR">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7oU-i4-cXR" id="kp6-Gk-ZEC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KTh-SF-7dY" id="nbR-3s-JFZ"/>
+                                    <outlet property="delegate" destination="KTh-SF-7dY" id="cRS-Qv-Vlc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8k7-a3-rha" firstAttribute="trailing" secondItem="RuO-ex-K8X" secondAttribute="trailing" id="1fQ-I3-qaZ"/>
+                            <constraint firstItem="RuO-ex-K8X" firstAttribute="leading" secondItem="8k7-a3-rha" secondAttribute="leading" id="41h-BT-qdW"/>
+                            <constraint firstItem="RuO-ex-K8X" firstAttribute="top" secondItem="8k7-a3-rha" secondAttribute="top" id="QPO-ke-Gf6"/>
+                            <constraint firstItem="8k7-a3-rha" firstAttribute="bottom" secondItem="RuO-ex-K8X" secondAttribute="bottom" id="gQ9-Ki-Ipp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8k7-a3-rha"/>
+                    </view>
+                    <connections>
+                        <outlet property="otlTableView" destination="RuO-ex-K8X" id="0yl-1z-5AC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="79H-bT-ICU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1049" y="759"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="skyblue_dress" width="1920" height="1080"/>
+    </resources>
 </document>

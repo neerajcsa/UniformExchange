@@ -20,6 +20,9 @@ struct Application {
 struct Service {
     //Login
     
+    //Dashboard
+    static let dashboard = "/pub/api.php?apirequest=dashboard"
+    
     //Public
     static let timeoutInterval : TimeInterval = 120
     

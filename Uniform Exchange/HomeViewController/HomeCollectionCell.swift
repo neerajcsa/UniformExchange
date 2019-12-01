@@ -10,4 +10,6 @@ import UIKit
 
 class HomeCollectionCell: UICollectionViewCell {
     
+    @IBOutlet weak var otlImageView : UIImageView?
+    
 }

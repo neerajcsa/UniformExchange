@@ -10,7 +10,7 @@ import UIKit
 
 class LoginService: NSObject {
 
-    //MARK : - Method Declaration/Definition
+    //MARK:- Method Declaration/Definition
     
     //Prepare param for Login authentication
     func prepareParamForLoginAuthentication(userName : String, password : String) -> Data? {
@@ -31,7 +31,7 @@ class LoginService: NSObject {
         }
         
         //send get request
-        GenericService().getRequestForService(getURL: accountURL, httpMethod: "GET", isUrlEncoded: false, serviceClosure: {(data, response, error) in
+        GenericService().getRequestForService(getURL: accountURL, httpMethod: "GET", serviceClosure: {(data, response, error) in
             loginClosure(data, response, error)
         })
     }

@@ -11,7 +11,7 @@
 		<key>Server-Name</key>
 		<string>Live</string>
 		<key>Server-URL</key>
-		<string>http://172.16.1.12:8086</string>
+		<string>https://speedbraker.com</string>
 	</dict>
 </dict>
 </plist>

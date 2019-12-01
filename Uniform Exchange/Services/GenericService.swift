@@ -12,21 +12,16 @@ class GenericService: NSObject {
     
     //MARK : Get Service
     
-    func getRequestForService(getURL : URL, httpMethod : String, isUrlEncoded : Bool, serviceClosure : @escaping Application.ServiceClosure) -> Void {
+    func getRequestForService(getURL : URL, httpMethod : String, serviceClosure : @escaping Application.ServiceClosure) -> Void {
         //create url request
         var request : URLRequest = URLRequest(url: getURL, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: Service.timeoutInterval)
         
         request.httpMethod = httpMethod
-        request.setValue("mobile", forHTTPHeaderField: "X-Requested-With")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpShouldHandleCookies = true
         
         //set request headers
-        if isUrlEncoded {
-            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        } else {
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        }
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         //create default session
         let session = URLSession.shared
@@ -46,7 +41,6 @@ class GenericService: NSObject {
         var request : URLRequest = URLRequest(url: putURL, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: Service.timeoutInterval)
         
         request.httpMethod = httpMethod
-        request.setValue("mobile", forHTTPHeaderField: "X-Requested-With")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpShouldHandleCookies = true
@@ -64,7 +58,7 @@ class GenericService: NSObject {
     
     //MARK: - Post Request
     
-    func postRequestForService(postURL : URL, httpMethod : String, jsonData : Data, isEncoded : Bool, isUrlEncoded : Bool, serviceClosure : @escaping Application.ServiceClosure) -> Void {
+    func postRequestForService(postURL : URL, httpMethod : String, jsonData : Data, isEncoded : Bool, serviceClosure : @escaping Application.ServiceClosure) -> Void {
         //create url request
         var request : URLRequest = URLRequest(url: postURL, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: Service.timeoutInterval)
         
@@ -74,18 +68,13 @@ class GenericService: NSObject {
         } else {
             request.httpBody = Application.appDelegate.encodeJsonData(jsonData: jsonData)
         }
-        request.setValue("mobile", forHTTPHeaderField: "X-Requested-With")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpShouldHandleCookies = true
         
         request.setValue(String(format: "%u",jsonData.count), forHTTPHeaderField: "Content-Length")
         
         //set request headers
-        if isUrlEncoded {
-            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        } else {
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        }
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         //create default session
         let session = URLSession.shared
@@ -98,21 +87,16 @@ class GenericService: NSObject {
         task.resume()
     }
     
-    func postRequestForServiceWithoutData(postURL : URL, httpMethod : String, isUrlEncoded : Bool, serviceClosure : @escaping Application.ServiceClosure) -> Void {
+    func postRequestForServiceWithoutData(postURL : URL, httpMethod : String, serviceClosure : @escaping Application.ServiceClosure) -> Void {
         //create url request
         var request : URLRequest = URLRequest(url: postURL, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: Service.timeoutInterval)
         
         request.httpMethod = httpMethod
-        request.setValue("mobile", forHTTPHeaderField: "X-Requested-With")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpShouldHandleCookies = true
         
         //set request headers
-        if isUrlEncoded {
-            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        } else {
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        }
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         //create default session
         let session = URLSession.shared
@@ -125,21 +109,16 @@ class GenericService: NSObject {
         task.resume()
     }
     
-    func deleteRequestForService(deleteURL : URL, httpMethod : String, isUrlEncoded : Bool, serviceClosure : @escaping Application.ServiceClosure) -> Void {
+    func deleteRequestForService(deleteURL : URL, httpMethod : String, serviceClosure : @escaping Application.ServiceClosure) -> Void {
         //create url request
         var request : URLRequest = URLRequest(url: deleteURL, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: Service.timeoutInterval)
         
         request.httpMethod = httpMethod
-        request.setValue("mobile", forHTTPHeaderField: "X-Requested-With")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpShouldHandleCookies = true
         
         //set request headers
-        if isUrlEncoded {
-            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        } else {
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        }
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         //create default session
         let session = URLSession.shared

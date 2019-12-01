@@ -39,3 +39,15 @@ class GlobalConfig: NSObject {
     }
     
 }
+
+
+//https://speedbraker.com/pub/api.php?apirequest=dashboard
+//https://speedbraker.com/pub/api.php?apirequest=productlist
+//https://speedbraker.com/pub/api.php?apirequest=productdetail&prid=1155
+
+//Register API
+//https://speedbraker.com/pub/api.php?apirequest=doregister&firstname=Sun&lastname=java&email=sun@gmail.com&password=@password&street=test1&street1=test2&postcode=201301&telephone=9876543221&city=Noida&state=Utter Pradesh
+//Update password
+//https://speedbraker.com/pub/api.php?apirequest=updatepassword&email=sun@gmail.com&password=@password1
+//Forgot Password
+ //https://speedbraker.com/pub/api.php?apirequest=resetpassword&email=sunil.chawla145@gmail.com

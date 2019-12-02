@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1634D65B63E255D0654AE00F /* Pods_Uniform_Exchange_Uniform_ExchangeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B979A53FA7A622B98FD9A8BC /* Pods_Uniform_Exchange_Uniform_ExchangeUITests.framework */; };
+		9605F30B23950B41009567DD /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605F30A23950B40009567DD /* AccountViewController.swift */; };
+		9605F30D23950B75009567DD /* ShopByCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605F30C23950B75009567DD /* ShopByCategoryViewController.swift */; };
+		9605F30F23950B84009567DD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605F30E23950B84009567DD /* SettingsViewController.swift */; };
+		9605F31123950B9A009567DD /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605F31023950B9A009567DD /* OrderViewController.swift */; };
+		9605F31323950BB0009567DD /* CustomerSupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605F31223950BB0009567DD /* CustomerSupportViewController.swift */; };
+		9605F31523950BD3009567DD /* ReferFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605F31423950BD3009567DD /* ReferFriendViewController.swift */; };
 		B504E6BD2390AF38004615E1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504E6BC2390AF38004615E1 /* MenuViewController.swift */; };
 		B504E6BF2390AF71004615E1 /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504E6BE2390AF71004615E1 /* MenuTableCell.swift */; };
 		B504E6C32390B30E004615E1 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504E6C22390B30E004615E1 /* DashboardService.swift */; };
@@ -84,6 +90,12 @@
 		62FD1E546B41F4419392F5AB /* Pods_Uniform_Exchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uniform_Exchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		731F7F386158BA8DFCE62217 /* Pods-Uniform Exchange-Uniform ExchangeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uniform Exchange-Uniform ExchangeUITests.release.xcconfig"; path = "Target Support Files/Pods-Uniform Exchange-Uniform ExchangeUITests/Pods-Uniform Exchange-Uniform ExchangeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7386FD48DB92FC49B226DF21 /* Pods-Uniform ExchangeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uniform ExchangeTests.release.xcconfig"; path = "Target Support Files/Pods-Uniform ExchangeTests/Pods-Uniform ExchangeTests.release.xcconfig"; sourceTree = "<group>"; };
+		9605F30A23950B40009567DD /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		9605F30C23950B75009567DD /* ShopByCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopByCategoryViewController.swift; sourceTree = "<group>"; };
+		9605F30E23950B84009567DD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9605F31023950B9A009567DD /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		9605F31223950BB0009567DD /* CustomerSupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSupportViewController.swift; sourceTree = "<group>"; };
+		9605F31423950BD3009567DD /* ReferFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferFriendViewController.swift; sourceTree = "<group>"; };
 		B504E6BC2390AF38004615E1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B504E6BE2390AF71004615E1 /* MenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
 		B504E6C22390B30E004615E1 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
@@ -163,6 +175,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9605F3092394F3B2009567DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9605F30A23950B40009567DD /* AccountViewController.swift */,
+				9605F30C23950B75009567DD /* ShopByCategoryViewController.swift */,
+				9605F30E23950B84009567DD /* SettingsViewController.swift */,
+				9605F31023950B9A009567DD /* OrderViewController.swift */,
+				9605F31223950BB0009567DD /* CustomerSupportViewController.swift */,
+				9605F31423950BD3009567DD /* ReferFriendViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		AF8B660466A303A9D904986E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +256,7 @@
 		B57AD8E8238A6EAF004C9CF3 /* Uniform Exchange */ = {
 			isa = PBXGroup;
 			children = (
+				9605F3092394F3B2009567DD /* Controller */,
 				B504E6C923940BEB004615E1 /* View */,
 				B504E6C823940BE1004615E1 /* Model */,
 				B504E6C723940BD7004615E1 /* Utils */,
@@ -565,16 +591,22 @@
 				B504E6BD2390AF38004615E1 /* MenuViewController.swift in Sources */,
 				B57AD8EA238A6EAF004C9CF3 /* AppDelegate.swift in Sources */,
 				B57AD94E238AEC47004C9CF3 /* HomeViewController.swift in Sources */,
+				9605F30B23950B41009567DD /* AccountViewController.swift in Sources */,
 				B57AD930238AEC47004C9CF3 /* LoginViewController.swift in Sources */,
 				B57AD93F238AEC47004C9CF3 /* Configuration.swift in Sources */,
 				B57AD8EC238A6EAF004C9CF3 /* SceneDelegate.swift in Sources */,
 				B57AD954238AEC47004C9CF3 /* HomeVC.swift in Sources */,
 				B504E6C32390B30E004615E1 /* DashboardService.swift in Sources */,
+				9605F31523950BD3009567DD /* ReferFriendViewController.swift in Sources */,
+				9605F31323950BB0009567DD /* CustomerSupportViewController.swift in Sources */,
 				B57AD942238AEC47004C9CF3 /* Constant.swift in Sources */,
+				9605F30F23950B84009567DD /* SettingsViewController.swift in Sources */,
 				B504E6CF2394BADC004615E1 /* ContainerViewController.swift in Sources */,
 				B57AD951238AEC47004C9CF3 /* HomeCollectionCell.swift in Sources */,
 				B504E6CD23940C2C004615E1 /* MenuOption.swift in Sources */,
 				B57AD936238AEC47004C9CF3 /* CommonService.swift in Sources */,
+				9605F31123950B9A009567DD /* OrderViewController.swift in Sources */,
+				9605F30D23950B75009567DD /* ShopByCategoryViewController.swift in Sources */,
 				B504E6BF2390AF71004615E1 /* MenuTableCell.swift in Sources */,
 				B504E6CB23940C00004615E1 /* Protocols.swift in Sources */,
 				B57AD939238AEC47004C9CF3 /* LoginService.swift in Sources */,

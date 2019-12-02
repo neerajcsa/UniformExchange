@@ -10,6 +10,9 @@ import UIKit
 
 class MenuTableCell: UITableViewCell {
 
+    // MARK: - Properties
+    @IBOutlet weak var otlMenuName : UILabel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -19,6 +19,7 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.otlTableView?.rowHeight = 44.0
     }
     
 
@@ -40,15 +41,27 @@ extension MenuViewController : UITableViewDelegate,UITableViewDataSource {
         return 1
     }
     
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return ""
+//    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 7
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : MenuTableCell?
         cell = tableView.dequeueReusableCell(withIdentifier: "MENU_CELL", for: indexPath) as? MenuTableCell
         
+        let menuOption = MenuOption(rawValue: indexPath.row)
+        cell?.otlMenuName?.text = menuOption?.description
+        
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let menuOption = MenuOption(rawValue: indexPath.row)
+        delegate?.handleMenuToggle(forMenuOption: menuOption)
     }
     
 }

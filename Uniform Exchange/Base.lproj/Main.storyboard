@@ -71,9 +71,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bha-52-DsJ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="UNIFORM EXCHANGE" id="2hs-8H-M3a">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="BhP-1E-sKY"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="UNIFORM EXCHANGE" id="2hs-8H-M3a"/>
                     <connections>
                         <outlet property="otlCollectionView" destination="6nx-Jx-WUs" id="Be9-WE-lwh"/>
                         <outlet property="otlProgressView" destination="hfg-6Q-luw" id="T0q-Ar-nrV"/>

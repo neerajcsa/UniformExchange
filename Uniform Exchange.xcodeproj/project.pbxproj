@@ -13,6 +13,7 @@
 		B504E6C32390B30E004615E1 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504E6C22390B30E004615E1 /* DashboardService.swift */; };
 		B504E6CB23940C00004615E1 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504E6CA23940C00004615E1 /* Protocols.swift */; };
 		B504E6CD23940C2C004615E1 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504E6CC23940C2C004615E1 /* MenuOption.swift */; };
+		B504E6CF2394BADC004615E1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504E6CE2394BADC004615E1 /* ContainerViewController.swift */; };
 		B57AD8EA238A6EAF004C9CF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AD8E9238A6EAF004C9CF3 /* AppDelegate.swift */; };
 		B57AD8EC238A6EAF004C9CF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AD8EB238A6EAF004C9CF3 /* SceneDelegate.swift */; };
 		B57AD8F1238A6EAF004C9CF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57AD8EF238A6EAF004C9CF3 /* Main.storyboard */; };
@@ -89,6 +90,7 @@
 		B504E6C423929DA6004615E1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B504E6CA23940C00004615E1 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		B504E6CC23940C2C004615E1 /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
+		B504E6CE2394BADC004615E1 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		B57AD8E6238A6EAF004C9CF3 /* Uniform Exchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uniform Exchange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57AD8E9238A6EAF004C9CF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B57AD8EB238A6EAF004C9CF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 		B57AD929238AEC47004C9CF3 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B504E6CE2394BADC004615E1 /* ContainerViewController.swift */,
 				B57AD92A238AEC47004C9CF3 /* HomeViewController.swift */,
 				B57AD92B238AEC47004C9CF3 /* HomeCollectionCell.swift */,
 				B57AD92C238AEC47004C9CF3 /* HomeVC.swift */,
@@ -568,6 +571,7 @@
 				B57AD954238AEC47004C9CF3 /* HomeVC.swift in Sources */,
 				B504E6C32390B30E004615E1 /* DashboardService.swift in Sources */,
 				B57AD942238AEC47004C9CF3 /* Constant.swift in Sources */,
+				B504E6CF2394BADC004615E1 /* ContainerViewController.swift in Sources */,
 				B57AD951238AEC47004C9CF3 /* HomeCollectionCell.swift in Sources */,
 				B504E6CD23940C2C004615E1 /* MenuOption.swift in Sources */,
 				B57AD936238AEC47004C9CF3 /* CommonService.swift in Sources */,

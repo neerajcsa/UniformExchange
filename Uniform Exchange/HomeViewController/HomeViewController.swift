@@ -17,7 +17,6 @@ class HomeViewController: UIViewController {
     var delegate: HomeControllerDelegate?
     
     var menuController: MenuViewController!
-    var centerController: UIViewController!
     var isExpanded = false
     
     var homeVC : HomeVC?
@@ -47,11 +46,15 @@ class HomeViewController: UIViewController {
     //MARK: - Handlers
     
     @objc func handleMenuItem() {
-        delegate?.handleMenuToggle(forMenuOption: nil)
+        handleMenuToggle(forMenuOption: nil)
     }
     
     func configureNavigationBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "white_dress").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuItem))
+//        navigationController?.navigationBar.barTintColor = .darkGray
+//        navigationController?.navigationBar.barStyle = .black
+        
+        navigationItem.title = "UNIFORM EXCHANGE"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image:UIImage(named: "menu_icon")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuItem))
     }
 
     /*
@@ -68,7 +71,8 @@ class HomeViewController: UIViewController {
     
     func configureMenuController() {
         if menuController == nil {
-            menuController = MenuViewController()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            menuController = storyboard.instantiateViewController(withIdentifier: "MENU_VIEW_ID") as? MenuViewController
             menuController.delegate = self
             view.insertSubview(menuController.view, at: 0)
             addChild(menuController)
@@ -81,14 +85,14 @@ class HomeViewController: UIViewController {
         if shouldExpand {
             // show menu
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                self.centerController.view.frame.origin.x = self.centerController.view.frame.width - 80
+                self.view.frame.origin.x = self.view.frame.width - 80
             }, completion: nil)
             
         } else {
             // hide menu
             
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                self.centerController.view.frame.origin.x = 0
+                self.view.frame.origin.x = 0
             }) { (_) in
                 guard let menuOption = menuOption else { return }
                 self.didSelectMenuOption(menuOption: menuOption)

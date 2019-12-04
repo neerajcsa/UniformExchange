@@ -76,6 +76,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return convertedJSONData
     }
+    
+    //MARK: Date Utilities method
+    
+    func getStringDatefromTimeStamp (strDate : String , fromDateFormat : String, toDateFormat: String) -> String {
+        let trimmedDate = strDate.replacingOccurrences(of: "\\.\\d+", with: "", options: .regularExpression)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = fromDateFormat
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        
+        let date = dateFormatter.date(from: trimmedDate)
+        dateFormatter.dateFormat = toDateFormat
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        
+        let formattedDateString = date != nil ? dateFormatter.string(from: date!) : strDate
+        return formattedDateString
+    }
+    
+    func getDatefromTimeStamp (strDate : String) -> Date? {
+        let trimmedDate = strDate.replacingOccurrences(of: "\\.\\d+", with: "", options: .regularExpression)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = _T_DATE_FORMAT
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        let formattedDate = dateFormatter.date(from: trimmedDate)
+        return formattedDate
+    }
+    
+    func formatDateToString(date : Date, format : String) -> String {
+        let dateFormatter : DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        let formattedString : String = dateFormatter.string(from: date)
+        return formattedString
+    }
+    
+    func formatStringToDate(date : String, format : String) -> Date? {
+        let dateFormatter : DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
+        let formattedDate : Date? = dateFormatter.date(from: date)
+        return formattedDate
+    }
+    
+    //MARK: - attributed string
+    
+    func attributedStringForLabelTitle(title : String) -> NSAttributedString {
+        let attributeTitle : NSMutableAttributedString = NSMutableAttributedString(string: "\(title)*")
+        attributeTitle.addAttribute(NSAttributedString.Key.foregroundColor, value: _NAVIGATION_BAR_BACKGROUND_COLOR, range: NSMakeRange(attributeTitle.length - 1, 1))
+        return attributeTitle
+    }
 
 }
 

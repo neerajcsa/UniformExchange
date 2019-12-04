@@ -10,7 +10,8 @@ import UIKit
 
 //MARK: - List of configuration
 
- let _DATE_FORMAT : String = "dd-MMM-yyyy"
+let _DATE_FORMAT : String = "dd-MMM-yyyy"
+let _T_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'"
 
 //Global Settings
 let _VIEW_BACKGROUND_CLEAR_COLOR = UIColor.clear

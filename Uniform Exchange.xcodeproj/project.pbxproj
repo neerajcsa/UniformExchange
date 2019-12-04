@@ -14,6 +14,10 @@
 		9605F31123950B9A009567DD /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605F31023950B9A009567DD /* OrderViewController.swift */; };
 		9605F31323950BB0009567DD /* CustomerSupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605F31223950BB0009567DD /* CustomerSupportViewController.swift */; };
 		9605F31523950BD3009567DD /* ReferFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605F31423950BD3009567DD /* ReferFriendViewController.swift */; };
+		967C247B2397BC400081FCDA /* CustomPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C247A2397BC400081FCDA /* CustomPresentationManager.swift */; };
+		967C247D2397BC840081FCDA /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C247C2397BC840081FCDA /* CustomPresentationController.swift */; };
+		967C247F2397BCB00081FCDA /* CustomPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C247E2397BCB00081FCDA /* CustomPresentationAnimator.swift */; };
+		967C24812397BCC80081FCDA /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C24802397BCC80081FCDA /* PickerViewController.swift */; };
 		B504E6BD2390AF38004615E1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504E6BC2390AF38004615E1 /* MenuViewController.swift */; };
 		B504E6BF2390AF71004615E1 /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504E6BE2390AF71004615E1 /* MenuTableCell.swift */; };
 		B504E6C32390B30E004615E1 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504E6C22390B30E004615E1 /* DashboardService.swift */; };
@@ -96,6 +100,10 @@
 		9605F31023950B9A009567DD /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		9605F31223950BB0009567DD /* CustomerSupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSupportViewController.swift; sourceTree = "<group>"; };
 		9605F31423950BD3009567DD /* ReferFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferFriendViewController.swift; sourceTree = "<group>"; };
+		967C247A2397BC400081FCDA /* CustomPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationManager.swift; sourceTree = "<group>"; };
+		967C247C2397BC840081FCDA /* CustomPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
+		967C247E2397BCB00081FCDA /* CustomPresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationAnimator.swift; sourceTree = "<group>"; };
+		967C24802397BCC80081FCDA /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		B504E6BC2390AF38004615E1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B504E6BE2390AF71004615E1 /* MenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
 		B504E6C22390B30E004615E1 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
@@ -188,6 +196,17 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		967C24792397BBE00081FCDA /* CustomPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				967C247A2397BC400081FCDA /* CustomPresentationManager.swift */,
+				967C247C2397BC840081FCDA /* CustomPresentationController.swift */,
+				967C247E2397BCB00081FCDA /* CustomPresentationAnimator.swift */,
+				967C24802397BCC80081FCDA /* PickerViewController.swift */,
+			);
+			path = CustomPresentation;
+			sourceTree = "<group>";
+		};
 		AF8B660466A303A9D904986E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +275,7 @@
 		B57AD8E8238A6EAF004C9CF3 /* Uniform Exchange */ = {
 			isa = PBXGroup;
 			children = (
+				967C24792397BBE00081FCDA /* CustomPresentation */,
 				9605F3092394F3B2009567DD /* Controller */,
 				B504E6C923940BEB004615E1 /* View */,
 				B504E6C823940BE1004615E1 /* Model */,
@@ -592,11 +612,14 @@
 				B57AD8EA238A6EAF004C9CF3 /* AppDelegate.swift in Sources */,
 				B57AD94E238AEC47004C9CF3 /* HomeViewController.swift in Sources */,
 				9605F30B23950B41009567DD /* AccountViewController.swift in Sources */,
+				967C24812397BCC80081FCDA /* PickerViewController.swift in Sources */,
 				B57AD930238AEC47004C9CF3 /* LoginViewController.swift in Sources */,
 				B57AD93F238AEC47004C9CF3 /* Configuration.swift in Sources */,
 				B57AD8EC238A6EAF004C9CF3 /* SceneDelegate.swift in Sources */,
 				B57AD954238AEC47004C9CF3 /* HomeVC.swift in Sources */,
+				967C247D2397BC840081FCDA /* CustomPresentationController.swift in Sources */,
 				B504E6C32390B30E004615E1 /* DashboardService.swift in Sources */,
+				967C247B2397BC400081FCDA /* CustomPresentationManager.swift in Sources */,
 				9605F31523950BD3009567DD /* ReferFriendViewController.swift in Sources */,
 				9605F31323950BB0009567DD /* CustomerSupportViewController.swift in Sources */,
 				B57AD942238AEC47004C9CF3 /* Constant.swift in Sources */,
@@ -605,6 +628,7 @@
 				B57AD951238AEC47004C9CF3 /* HomeCollectionCell.swift in Sources */,
 				B504E6CD23940C2C004615E1 /* MenuOption.swift in Sources */,
 				B57AD936238AEC47004C9CF3 /* CommonService.swift in Sources */,
+				967C247F2397BCB00081FCDA /* CustomPresentationAnimator.swift in Sources */,
 				9605F31123950B9A009567DD /* OrderViewController.swift in Sources */,
 				9605F30D23950B75009567DD /* ShopByCategoryViewController.swift in Sources */,
 				B504E6BF2390AF71004615E1 /* MenuTableCell.swift in Sources */,

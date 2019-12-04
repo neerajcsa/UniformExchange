@@ -101,15 +101,20 @@ class ContainerViewController: UIViewController {
                 controller = storyboard.instantiateViewController(withIdentifier: "SHOP_BY_CATEGORY_ID")
                 Application.appDelegate.navController?.pushViewController(controller!, animated: true)
             case .YourOrder:
-                break
+                controller = storyboard.instantiateViewController(withIdentifier: "ORDER_ID")
+                Application.appDelegate.navController?.pushViewController(controller!, animated: true)
             case .YourAccounts:
-                break
+                controller = storyboard.instantiateViewController(withIdentifier: "ACCOUNT_ID")
+                Application.appDelegate.navController?.pushViewController(controller!, animated: true)
             case .ReferAFriend:
-                break
+                controller = storyboard.instantiateViewController(withIdentifier: "REFER_FRIEND_ID")
+                Application.appDelegate.navController?.pushViewController(controller!, animated: true)
             case .Settings:
-                break
+                controller = storyboard.instantiateViewController(withIdentifier: "SETTINGS_ID")
+                Application.appDelegate.navController?.pushViewController(controller!, animated: true)
             case .CustomerSupport:
-                break
+                controller = storyboard.instantiateViewController(withIdentifier: "CUSTOMER_SUPPORT_ID")
+                Application.appDelegate.navController?.pushViewController(controller!, animated: true)
         }
     }
     

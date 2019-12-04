@@ -51,8 +51,8 @@ class ContainerViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let homeController : HomeViewController = storyboard.instantiateViewController(withIdentifier: "HOME_ID") as! HomeViewController
         homeController.delegate = self
-        centerController = UINavigationController(rootViewController: homeController)
-        
+        Application.appDelegate.navController = UINavigationController(rootViewController: homeController)
+        centerController = Application.appDelegate.navController
         view.addSubview(centerController.view)
         addChild(centerController)
         centerController.didMove(toParent: self)
@@ -92,13 +92,14 @@ class ContainerViewController: UIViewController {
     }
     
     func didSelectMenuOption(menuOption: MenuOption) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller : UIViewController?
         switch menuOption {
             case .Home:
                 break
             case .ShopByCategory:
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let controller = storyboard.instantiateViewController(withIdentifier: "SHOP_BY_CATEGORY_ID")
-                present(UINavigationController(rootViewController: controller), animated: true, completion: nil)
+                controller = storyboard.instantiateViewController(withIdentifier: "SHOP_BY_CATEGORY_ID")
+                Application.appDelegate.navController?.pushViewController(controller!, animated: true)
             case .YourOrder:
                 break
             case .YourAccounts:

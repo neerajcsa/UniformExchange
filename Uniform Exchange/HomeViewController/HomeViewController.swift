@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
         configureNavigationBar()
         
         //call service
-//        self.callServiceToGetDashboardDetails()
+        self.callServiceToGetDashboardDetails()
     }
     
     //MARK: - Handlers

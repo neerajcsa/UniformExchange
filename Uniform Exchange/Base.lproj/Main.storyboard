@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TMM-e6-QcO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TMM-e6-QcO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -105,11 +105,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7n-CD-Era" userLabel="Container View">
-                                <rect key="frame" x="0.0" y="44" width="414" height="45"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkH-EP-q7o">
-                                        <rect key="frame" x="24" y="14" width="378" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raman Sharma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkH-EP-q7o">
+                                        <rect key="frame" x="24" y="49.5" width="378" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -118,9 +118,17 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="nkH-EP-q7o" secondAttribute="trailing" constant="12" id="4Ix-2R-7QU"/>
                                     <constraint firstItem="nkH-EP-q7o" firstAttribute="centerY" secondItem="h7n-CD-Era" secondAttribute="centerY" id="7J4-5l-gxY"/>
+                                    <constraint firstAttribute="bottom" secondItem="nkH-EP-q7o" secondAttribute="bottom" constant="20" id="EuJ-vh-x6L"/>
+                                    <constraint firstAttribute="height" constant="89" id="bcP-ll-YO3"/>
                                     <constraint firstAttribute="height" constant="45" id="g8Q-ML-xtC"/>
                                     <constraint firstItem="nkH-EP-q7o" firstAttribute="leading" secondItem="h7n-CD-Era" secondAttribute="leading" constant="24" id="t1D-3h-VDh"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="g8Q-ML-xtC"/>
+                                        <exclude reference="7J4-5l-gxY"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="RuO-ex-K8X">
                                 <rect key="frame" x="0.0" y="89" width="414" height="773"/>
@@ -134,8 +142,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAA-Jc-7Jd">
-                                                    <rect key="frame" x="24" y="13.5" width="378" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="24" y="13" width="378" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -163,6 +171,7 @@
                             <constraint firstItem="h7n-CD-Era" firstAttribute="top" secondItem="8k7-a3-rha" secondAttribute="top" id="0ZO-kb-5Wr"/>
                             <constraint firstItem="8k7-a3-rha" firstAttribute="trailing" secondItem="RuO-ex-K8X" secondAttribute="trailing" id="1fQ-I3-qaZ"/>
                             <constraint firstItem="RuO-ex-K8X" firstAttribute="leading" secondItem="8k7-a3-rha" secondAttribute="leading" id="41h-BT-qdW"/>
+                            <constraint firstItem="h7n-CD-Era" firstAttribute="top" secondItem="6RO-na-c2W" secondAttribute="top" id="5g3-Nr-LoS"/>
                             <constraint firstItem="h7n-CD-Era" firstAttribute="trailing" secondItem="8k7-a3-rha" secondAttribute="trailing" id="FYp-3U-hWx"/>
                             <constraint firstItem="RuO-ex-K8X" firstAttribute="top" secondItem="8k7-a3-rha" secondAttribute="top" id="QPO-ke-Gf6"/>
                             <constraint firstItem="8k7-a3-rha" firstAttribute="bottom" secondItem="RuO-ex-K8X" secondAttribute="bottom" id="gQ9-Ki-Ipp"/>
@@ -172,6 +181,7 @@
                         <viewLayoutGuide key="safeArea" id="8k7-a3-rha"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="0ZO-kb-5Wr"/>
                                 <exclude reference="QPO-ke-Gf6"/>
                             </mask>
                         </variation>

@@ -51,3 +51,17 @@ class GlobalConfig: NSObject {
 //https://speedbraker.com/pub/api.php?apirequest=updatepassword&email=sun@gmail.com&password=@password1
 //Forgot Password
  //https://speedbraker.com/pub/api.php?apirequest=resetpassword&email=sunil.chawla145@gmail.com
+//Get All Address
+//https://speedbraker.com/pub/api.php?apirequest=getaddress&customerId=53
+//Login API
+//https://speedbraker.com/pub/api.php?apirequest=login&email=sun@gmail.com&password=@password1
+//New Shipping Address
+//https://speedbraker.com/pub/api.php?apirequest=newshippingaddress&firstname=Sun&lastname=java&customerId=53&password=@pass&street=test1&street1=test2&postcode=201301&telephone=9876543221&city=Noida&state=Utter Pradesh
+//New Billing Address
+//https://speedbraker.com/pub/api.php?apirequest=newbillingaddress&firstname=Sun&lastname=java&customerId=53&password=@pass&street=test1&street1=test2&postcode=201301&telephone=9876543221&city=Noida&state=Utter Pradesh
+//Default Address
+//https://speedbraker.com/pub/api.php?apirequest=newdefaultaddress&firstname=Sun&lastname=java&customerId=53&password=@pass&street=test1&street1=test2&postcode=201301&telephone=9876543221&city=Noida&state=Utter Pradesh
+//Address Delete
+//https://speedbraker.com/pub/api.php?apirequest=removeaddress&addressId=17
+//Category
+//https://speedbraker.com/pub/api.php?apirequest=catlist

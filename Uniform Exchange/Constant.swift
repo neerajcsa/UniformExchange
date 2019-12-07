@@ -19,9 +19,21 @@ struct Application {
 
 struct Service {
     //Login
-    
+    static let login = "/pub/api.php?apirequest=login"
+    //Register
+    static let registerUser = "/pub/api.php?apirequest=doregister"
+    static let updatePassword = "/pub/api.php?apirequest=updatepassword"
+    static let forgotPassword = "/pub/api.php?apirequest=resetpassword"
+    static let getAddress = "/pub/api.php?apirequest=getaddress"
+    static let shippingAddress = "/pub/api.php?apirequest=newshippingaddress"
+    static let billingAddress = "/pub/api.php?apirequest=newbillingaddress"
+    static let defaultAddress = "/pub/api.php?apirequest=newdefaultaddress"
+    static let deleteAddress = "/pub/api.php?apirequest=removeaddress"
     //Dashboard
     static let dashboard = "/pub/api.php?apirequest=dashboard"
+    static let categoryList = "/pub/api.php?apirequest=catlist"
+    static let productList = "/pub/api.php?apirequest=productlist"
+    static let productDetails = "/pub/api.php?apirequest=productdetail&prid=%@"
     
     //Public
     static let timeoutInterval : TimeInterval = 120

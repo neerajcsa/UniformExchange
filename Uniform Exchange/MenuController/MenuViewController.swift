@@ -22,6 +22,7 @@ class MenuViewController: UIViewController {
         self.otlTableView?.rowHeight = 44.0
         self.view.backgroundColor = UIColor(named: "menu_background")
         self.otlTableView?.backgroundColor = UIColor(named: "menu_background")
+        self.otlTableView?.tableFooterView = UIView()
     }
     
 

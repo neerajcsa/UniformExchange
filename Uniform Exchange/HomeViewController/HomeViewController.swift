@@ -22,9 +22,8 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         configureNavigationBar()
-        
         //call service
-//        self.callServiceToGetDashboardDetails()
+        self.callServiceToGetDashboardDetails()
     }
     
     //MARK: - Handlers
@@ -37,7 +36,7 @@ class HomeViewController: UIViewController {
 //        navigationController?.navigationBar.barTintColor = .darkGray
 //        navigationController?.navigationBar.barStyle = .black
         
-        navigationItem.title = "SIDE MENU"//"UNIFORM EXCHANGE"
+        navigationItem.title = "UNIFORM EXCHANGE"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image:UIImage(named: "menu_icon")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuItem))
     }
 

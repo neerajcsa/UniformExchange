@@ -16,6 +16,13 @@ class CustomerSupportViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationItem.title = "Customer Support"
+        navigationController?.navigationBar.topItem?.title = ""
+    }
+    
 
     /*
     // MARK: - Navigation

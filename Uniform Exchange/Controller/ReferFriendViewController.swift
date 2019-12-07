@@ -16,6 +16,13 @@ class ReferFriendViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationItem.title = "Refer a Friend"
+        navigationController?.navigationBar.topItem?.title = ""
+    }
+    
 
     /*
     // MARK: - Navigation

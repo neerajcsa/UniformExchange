@@ -6,6 +6,7 @@ target 'Uniform Exchange' do
   use_frameworks!
   # Pods for Uniform Exchange
   pod 'SDWebImage'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
 
 
   target 'Uniform ExchangeTests' do

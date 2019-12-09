@@ -27,6 +27,8 @@
 		B5634F2923996A3200E6F702 /* ProductCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5634F2823996A3200E6F702 /* ProductCategoryVC.swift */; };
 		B5634F2B23996BE900E6F702 /* ProductCategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5634F2A23996BE900E6F702 /* ProductCategoryCollectionCell.swift */; };
 		B5634F2D2399FDAE00E6F702 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5634F2C2399FDAE00E6F702 /* ProductDetailsViewController.swift */; };
+		B5634F2F239CB74D00E6F702 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5634F2E239CB74D00E6F702 /* RegisterUserViewController.swift */; };
+		B5634F31239CC47000E6F702 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5634F30239CC47000E6F702 /* ForgotPasswordViewController.swift */; };
 		B57AD8EA238A6EAF004C9CF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AD8E9238A6EAF004C9CF3 /* AppDelegate.swift */; };
 		B57AD8EC238A6EAF004C9CF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AD8EB238A6EAF004C9CF3 /* SceneDelegate.swift */; };
 		B57AD8F1238A6EAF004C9CF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57AD8EF238A6EAF004C9CF3 /* Main.storyboard */; };
@@ -117,6 +119,8 @@
 		B5634F2823996A3200E6F702 /* ProductCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryVC.swift; sourceTree = "<group>"; };
 		B5634F2A23996BE900E6F702 /* ProductCategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryCollectionCell.swift; sourceTree = "<group>"; };
 		B5634F2C2399FDAE00E6F702 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		B5634F2E239CB74D00E6F702 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
+		B5634F30239CC47000E6F702 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		B57AD8E6238A6EAF004C9CF3 /* Uniform Exchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uniform Exchange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57AD8E9238A6EAF004C9CF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B57AD8EB238A6EAF004C9CF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 				9605F31223950BB0009567DD /* CustomerSupportViewController.swift */,
 				9605F31423950BD3009567DD /* ReferFriendViewController.swift */,
 				B5634F2C2399FDAE00E6F702 /* ProductDetailsViewController.swift */,
+				B5634F2E239CB74D00E6F702 /* RegisterUserViewController.swift */,
+				B5634F30239CC47000E6F702 /* ForgotPasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -615,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57AD92D238AEC47004C9CF3 /* GlobalConfig.swift in Sources */,
+				B5634F2F239CB74D00E6F702 /* RegisterUserViewController.swift in Sources */,
 				B57AD93C238AEC47004C9CF3 /* GenericService.swift in Sources */,
 				B57AD933238AEC47004C9CF3 /* Extension+String.swift in Sources */,
 				B504E6BD2390AF38004615E1 /* MenuViewController.swift in Sources */,
@@ -641,6 +648,7 @@
 				B5634F2B23996BE900E6F702 /* ProductCategoryCollectionCell.swift in Sources */,
 				967C247F2397BCB00081FCDA /* CustomPresentationAnimator.swift in Sources */,
 				9605F31123950B9A009567DD /* OrderViewController.swift in Sources */,
+				B5634F31239CC47000E6F702 /* ForgotPasswordViewController.swift in Sources */,
 				9605F30D23950B75009567DD /* ShopByCategoryViewController.swift in Sources */,
 				B5634F2923996A3200E6F702 /* ProductCategoryVC.swift in Sources */,
 				B504E6BF2390AF71004615E1 /* MenuTableCell.swift in Sources */,
@@ -840,6 +848,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3C25E2CA7CE547B318A1F82F /* Pods-Uniform Exchange.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Uniform Exchange/Info.plist";
@@ -859,6 +868,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB43491F6F5367DB6BC3FA4B /* Pods-Uniform Exchange.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Uniform Exchange/Info.plist";

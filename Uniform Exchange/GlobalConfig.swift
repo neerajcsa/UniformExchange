@@ -65,3 +65,12 @@ class GlobalConfig: NSObject {
 //https://speedbraker.com/pub/api.php?apirequest=removeaddress&addressId=17
 //Category
 //https://speedbraker.com/pub/api.php?apirequest=catlist
+//Cart
+//https://speedbraker.com/pub/api.php?apirequest=docart&prid=1155&size=12&qty=1
+//https://speedbraker.com/pub/api.php?apirequest=docart&prid=1155&size=12&qty=1&size=12&customerId=53
+//https://speedbraker.com/pub/api.php?apirequest=docart&prid=1155&size=12&qty=1&quoteid=756
+//https://speedbraker.com/pub/api.php?apirequest=docartdetail&customerId=53
+//https://speedbraker.com/pub/api.php?apirequest=docartdetail&quoteid=756
+//https://speedbraker.com/pub/api.php?apirequest=removeitem&quoteid=756&delitem=1780
+//https://speedbraker.com/pub/api.php?apirequest=updatecart&quoteid=756&itemid=1778&qty=3
+//https://speedbraker.com/pub/api.php?apirequest=cartassign&quoteid=761&customerId=53

@@ -7,6 +7,7 @@ target 'Uniform Exchange' do
   # Pods for Uniform Exchange
   pod 'SDWebImage'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'NotificationBannerSwift', '~> 3.0.0'
 
 
   target 'Uniform ExchangeTests' do

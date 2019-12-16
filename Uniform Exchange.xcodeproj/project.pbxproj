@@ -72,6 +72,8 @@
 		B57AD954238AEC47004C9CF3 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AD92C238AEC47004C9CF3 /* HomeVC.swift */; };
 		B57AD955238AEC47004C9CF3 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AD92C238AEC47004C9CF3 /* HomeVC.swift */; };
 		B57AD956238AEC47004C9CF3 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AD92C238AEC47004C9CF3 /* HomeVC.swift */; };
+		B593895323A60EBD00CFAC25 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593895223A60EBD00CFAC25 /* AddressViewController.swift */; };
+		B593895523A60F4900CFAC25 /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593895423A60F4900CFAC25 /* AddAddressViewController.swift */; };
 		D55EC32DFB60E33CC9FC6536 /* Pods_Uniform_ExchangeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24337388141111594D3517B /* Pods_Uniform_ExchangeTests.framework */; };
 		FB67F9B267CC19BC72FAF15C /* Pods_Uniform_Exchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62FD1E546B41F4419392F5AB /* Pods_Uniform_Exchange.framework */; };
 /* End PBXBuildFile section */
@@ -146,6 +148,8 @@
 		B57AD92A238AEC47004C9CF3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B57AD92B238AEC47004C9CF3 /* HomeCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		B57AD92C238AEC47004C9CF3 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		B593895223A60EBD00CFAC25 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		B593895423A60F4900CFAC25 /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
 		B979A53FA7A622B98FD9A8BC /* Pods_Uniform_Exchange_Uniform_ExchangeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uniform_Exchange_Uniform_ExchangeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA06B0D4F0D9BD3316E33C9C /* Pods-Uniform ExchangeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uniform ExchangeTests.debug.xcconfig"; path = "Target Support Files/Pods-Uniform ExchangeTests/Pods-Uniform ExchangeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E24337388141111594D3517B /* Pods_Uniform_ExchangeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uniform_ExchangeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +209,8 @@
 				B5634F2C2399FDAE00E6F702 /* ProductDetailsViewController.swift */,
 				B5634F2E239CB74D00E6F702 /* RegisterUserViewController.swift */,
 				B5634F30239CC47000E6F702 /* ForgotPasswordViewController.swift */,
+				B593895223A60EBD00CFAC25 /* AddressViewController.swift */,
+				B593895423A60F4900CFAC25 /* AddAddressViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -631,6 +637,7 @@
 				967C24812397BCC80081FCDA /* PickerViewController.swift in Sources */,
 				B57AD930238AEC47004C9CF3 /* LoginViewController.swift in Sources */,
 				B57AD93F238AEC47004C9CF3 /* Configuration.swift in Sources */,
+				B593895523A60F4900CFAC25 /* AddAddressViewController.swift in Sources */,
 				B57AD8EC238A6EAF004C9CF3 /* SceneDelegate.swift in Sources */,
 				B57AD954238AEC47004C9CF3 /* HomeVC.swift in Sources */,
 				967C247D2397BC840081FCDA /* CustomPresentationController.swift in Sources */,
@@ -653,6 +660,7 @@
 				B5634F2923996A3200E6F702 /* ProductCategoryVC.swift in Sources */,
 				B504E6BF2390AF71004615E1 /* MenuTableCell.swift in Sources */,
 				B504E6CB23940C00004615E1 /* Protocols.swift in Sources */,
+				B593895323A60EBD00CFAC25 /* AddressViewController.swift in Sources */,
 				B57AD939238AEC47004C9CF3 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

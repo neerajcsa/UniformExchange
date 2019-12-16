@@ -18,8 +18,8 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var otlBtnSignIn : UIButton?
     @IBOutlet weak var otlBtnCreateAccount : UIButton?
     @IBOutlet weak var otlBtnForgotPassword : UIButton?
-    @IBOutlet weak var otlLblEmail : SkyFloatingLabelTextField?
-    @IBOutlet weak var otlLblPassword : SkyFloatingLabelTextField?
+    @IBOutlet weak var otlTextEmail : SkyFloatingLabelTextField?
+    @IBOutlet weak var otlTextPassword : SkyFloatingLabelTextField?
     @IBOutlet weak var otlProgressView : UIActivityIndicatorView?
     
     override func viewDidLoad() {
@@ -61,8 +61,17 @@ class AccountViewController: UIViewController {
         //start animation
         self.manageProgressView(isHidden: true)
         
+        //get user name
+        let userName = self.otlTextEmail?.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        //get password
+        let password = self.otlTextEmail?.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        
+        guard validateLoginFields(userName: userName, password: password) else {
+            return
+        }
+
         //call service to login
-        self.callServiceToLogin(userName: "sun1@gmail.com", password: "@password1")
+        self.callServiceToLogin(userName: userName, password: password)
     }
     
     @IBAction func onBtnClickCreateAccount(_ sender : UIButton) {
@@ -71,6 +80,39 @@ class AccountViewController: UIViewController {
     
     @IBAction func onBtnClickForgotPassword(_ sender : UIButton) {
         self.performSegue(withIdentifier: "FORGOT_PASSWORD_ID", sender: self)
+    }
+    
+    func validateLoginFields(userName : String, password : String) -> Bool {
+        guard userName.count > 0 else {
+            return false
+        }
+        
+        guard password.count > 0 else {
+            return false
+        }
+        
+        return true
+    }
+    
+    func isValidEmailAddress(emailAddress: String) -> Bool {
+        var returnValue = true
+        let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+        
+        do {
+            let regex = try NSRegularExpression(pattern: emailRegEx)
+            let nsString = emailAddress as NSString
+            let results = regex.matches(in: emailAddress, range: NSRange(location: 0, length: nsString.length))
+            
+            if results.count == 0 {
+                returnValue = false
+            }
+            
+        } catch let error as NSError {
+            print("invalid regex: \(error.localizedDescription)")
+            returnValue = false
+        }
+        
+        return  returnValue
     }
     
     //MARK:- Manage Progress View

@@ -44,6 +44,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         bannerTimer?.invalidate()
+        bannerTimer = nil
         super.viewDidDisappear(animated)
     }
     

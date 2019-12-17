@@ -37,11 +37,16 @@ class ShopByCategoryViewController: UIViewController,UISearchResultsUpdating,UIS
         self.callServiceToGetProductCategory()
     }
     
+    func configureNavigationBar() {
+        //set title
+        navigationItem.title = "Category"
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationItem.title = "Shop By Category"
-        navigationController?.navigationBar.topItem?.title = ""
+        //configure navigation bar
+        self.configureNavigationBar()
     }
     
 

@@ -13,19 +13,30 @@ class MenuViewController: UIViewController {
     //MARK:- Properties Declaration
     
     @IBOutlet weak var otlTableView : UITableView?
-    var delegate: HomeControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.otlTableView?.rowHeight = 44.0
-        self.view.backgroundColor = UIColor(named: "menu_background")
-        self.otlTableView?.backgroundColor = UIColor(named: "menu_background")
+        self.otlTableView?.rowHeight = 60.0
         self.otlTableView?.tableFooterView = UIView()
+        
+        //configure navigation bar
+        self.configureNavigationBar()
     }
     
-
+    func configureNavigationBar() {
+        //set title
+        navigationItem.title = "More"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //configure navigation bar
+        self.configureNavigationBar()
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -49,7 +60,7 @@ extension MenuViewController : UITableViewDelegate,UITableViewDataSource {
 //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,7 +75,23 @@ extension MenuViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let menuOption = MenuOption(rawValue: indexPath.row)
-        delegate?.handleMenuToggle(forMenuOption: menuOption)
+        didSelectMenuOption(menuOption: menuOption!)
+    }
+    
+    func didSelectMenuOption(menuOption: MenuOption) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller : UIViewController?
+        switch menuOption {
+            case .ReferAFriend:
+                controller = storyboard.instantiateViewController(withIdentifier: "REFER_FRIEND_ID")
+                self.navigationController?.pushViewController(controller!, animated: true)
+            case .Settings:
+                controller = storyboard.instantiateViewController(withIdentifier: "SETTINGS_ID")
+                self.navigationController?.pushViewController(controller!, animated: true)
+            case .CustomerSupport:
+                controller = storyboard.instantiateViewController(withIdentifier: "CUSTOMER_SUPPORT_ID")
+                self.navigationController?.pushViewController(controller!, animated: true)
+        }
     }
     
 }

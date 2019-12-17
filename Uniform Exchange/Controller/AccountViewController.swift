@@ -34,11 +34,16 @@ class AccountViewController: UIViewController {
         otlBtnForgotPassword?.setAttributedTitle(attributedString, for: .normal)
     }
     
+    func configureNavigationBar() {
+        //set title
+        navigationItem.title = "Account"
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationItem.title = "Account"
-        navigationController?.navigationBar.topItem?.title = ""
+        //configure navigation bar
+        self.configureNavigationBar()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

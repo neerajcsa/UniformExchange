@@ -16,8 +16,6 @@ class MenuTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        //set background color
-        self.backgroundColor = UIColor(named: "menu_background")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

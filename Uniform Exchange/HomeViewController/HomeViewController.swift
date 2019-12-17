@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var otlPageControl : UIPageControl?
 
     var bannerTimer : Timer?
-    var delegate: HomeControllerDelegate?
     var homeVC : HomeVC?
     
     override func viewDidLoad() {
@@ -27,7 +26,6 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         //allow selection
         self.otlCollectionBannerView?.allowsSelection = true
-        configureNavigationBar()
         //call service
         self.callServiceToGetDashboardDetails()
     }
@@ -58,17 +56,12 @@ class HomeViewController: UIViewController {
         self.otlCollectionBannerView?.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
         self.otlCollectionBannerView?.reloadData()
     }
-    
-    @objc func handleMenuItem() {
-        delegate?.handleMenuToggle(forMenuOption: nil)
-    }
-    
+        
     func configureNavigationBar() {
 //        navigationController?.navigationBar.barTintColor = .darkGray
 //        navigationController?.navigationBar.barStyle = .black
         
         navigationItem.title = "UNIFORM EXCHANGE"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image:UIImage(named: "menu_icon")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuItem))
     }
 
     /*

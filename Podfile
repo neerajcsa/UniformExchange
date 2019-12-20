@@ -8,7 +8,7 @@ target 'Uniform Exchange' do
   pod 'SDWebImage'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   pod 'NotificationBannerSwift', '~> 3.0.0'
-
+  pod 'SwiftKeychainWrapper'
 
   target 'Uniform ExchangeTests' do
     inherit! :search_paths

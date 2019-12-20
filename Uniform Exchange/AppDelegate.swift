@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import NotificationBannerSwift
+import SwiftKeychainWrapper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var strAppName : String?
     var strServerURL : String?
-
+    var isLoggedIn : Bool = false
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -22,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //set app config
         self.setAppConfig()
+        
+        //logged in info
+        isLoggedIn = KeychainWrapper.standard.bool(forKey: "LOGGED_IN") ?? false
         
         return true
     }
@@ -49,6 +55,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    //MARK:- Display banner message
+    
+    func showNotification(message : String, style : BannerStyle) {
+        let banner = FloatingNotificationBanner(title : strAppName, subtitle: message, style: style)
+        banner.show()
+        banner.duration = 3
+    }
     
     //MARK:- Encode characters for special characters
     

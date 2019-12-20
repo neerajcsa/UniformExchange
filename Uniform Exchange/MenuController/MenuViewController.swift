@@ -60,7 +60,7 @@ extension MenuViewController : UITableViewDelegate,UITableViewDataSource {
 //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 7
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,15 +82,23 @@ extension MenuViewController : UITableViewDelegate,UITableViewDataSource {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller : UIViewController?
         switch menuOption {
-            case .ReferAFriend:
-                controller = storyboard.instantiateViewController(withIdentifier: "REFER_FRIEND_ID")
-                self.navigationController?.pushViewController(controller!, animated: true)
-            case .Settings:
-                controller = storyboard.instantiateViewController(withIdentifier: "SETTINGS_ID")
-                self.navigationController?.pushViewController(controller!, animated: true)
-            case .CustomerSupport:
-                controller = storyboard.instantiateViewController(withIdentifier: "CUSTOMER_SUPPORT_ID")
-                self.navigationController?.pushViewController(controller!, animated: true)
+        case .ReferAFriend:
+            controller = storyboard.instantiateViewController(withIdentifier: "REFER_FRIEND_ID")
+            self.navigationController?.pushViewController(controller!, animated: true)
+        case .Settings:
+            controller = storyboard.instantiateViewController(withIdentifier: "SETTINGS_ID")
+            self.navigationController?.pushViewController(controller!, animated: true)
+        case .CustomerSupport:
+            controller = storyboard.instantiateViewController(withIdentifier: "CUSTOMER_SUPPORT_ID")
+            self.navigationController?.pushViewController(controller!, animated: true)
+        case .MyOrders:
+            break
+        case .MyAddresses:
+            break
+        case .ReturnPolicy:
+            break
+        case .ShippingPolicy:
+            break
         }
     }
     

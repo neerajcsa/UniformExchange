@@ -10,12 +10,22 @@ import UIKit
 
 class AddAddressViewController: UIViewController {
 
+    //MARK:- Properties
+    
+    var isEditAddress : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationItem.title = "Add Address"
+        navigationController?.navigationBar.topItem?.title = ""
+    }
 
     /*
     // MARK: - Navigation

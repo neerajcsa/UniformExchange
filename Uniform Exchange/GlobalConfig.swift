@@ -69,3 +69,13 @@ class GlobalConfig: NSObject {
 //https://speedbraker.com/pub/api.php?apirequest=removeitem&quoteid=756&delitem=1780
 //https://speedbraker.com/pub/api.php?apirequest=updatecart&quoteid=756&itemid=1778&qty=3
 //https://speedbraker.com/pub/api.php?apirequest=cartassign&quoteid=761&customerId=53
+
+//https://speedbraker.com/pub/api.php?apirequest=doOrder&customerId=53&quoteid=761&addressId=15
+
+//https://speedbraker.com/pub/api.php?apirequest=applycoupon&quoteid=761&couponCode=COUNPON
+//https://speedbraker.com/pub/api.php?apirequest=removecoupon&quoteid=761
+
+//https://speedbraker.com/pub/api.php?apirequest=getaddressbyid&addressId=15
+
+//https://speedbraker.com/pub/api.php?apirequest=myorders&customerId=53
+//https://speedbraker.com/pub/api.php?apirequest=orderdetail&orderid=52

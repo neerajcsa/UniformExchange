@@ -30,5 +30,15 @@ enum MenuOption: Int, CustomStringConvertible, CaseIterable {
         }
     }
     
+    static func countMenuOption() -> Int {
+        var arrMenuOption = ["Refer a Friend", "Return Policy", "Shipping Policy", "Settings", "Customer Support"]
+//        if Application.appDelegate.isLoggedIn {
+            arrMenuOption.insert("My Addressess", at: 0)
+            arrMenuOption.insert("My Orders", at: 0)
+//        }
+        
+        return arrMenuOption.count
+    }
+    
 }
 

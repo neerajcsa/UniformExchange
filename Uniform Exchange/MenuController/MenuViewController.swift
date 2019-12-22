@@ -35,6 +35,9 @@ class MenuViewController: UIViewController {
         
         //configure navigation bar
         self.configureNavigationBar()
+        
+        //reload table view
+        self.otlTableView?.reloadData()
     }
     
     /*
@@ -60,7 +63,7 @@ extension MenuViewController : UITableViewDelegate,UITableViewDataSource {
 //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return MenuOption.countMenuOption()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,9 +95,11 @@ extension MenuViewController : UITableViewDelegate,UITableViewDataSource {
             controller = storyboard.instantiateViewController(withIdentifier: "CUSTOMER_SUPPORT_ID")
             self.navigationController?.pushViewController(controller!, animated: true)
         case .MyOrders:
-            break
+            controller = storyboard.instantiateViewController(withIdentifier: "ORDER_ID")
+            self.navigationController?.pushViewController(controller!, animated: true)
         case .MyAddresses:
-            break
+            controller = storyboard.instantiateViewController(withIdentifier: "ADDRESS_ID")
+            self.navigationController?.pushViewController(controller!, animated: true)
         case .ReturnPolicy:
             break
         case .ShippingPolicy:

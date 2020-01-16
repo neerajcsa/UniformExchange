@@ -17,3 +17,9 @@ struct ProductCategoryVC : Codable {
 
     var category : [Category]
 }
+
+struct ProductListVC : Codable {
+    var success : String
+    
+    var products : [GridProducts]
+}

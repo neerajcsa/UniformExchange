@@ -31,6 +31,8 @@ class AddressViewController: UIViewController {
         self.otlBtnAddAddress?.layer.borderWidth = 0.5
         self.otlBtnAddAddress?.layer.borderColor = UIColor.label.cgColor
         
+        self.configureNavigationBar()
+        
         //call service to get all address
         //get customer id
         let customerId = KeychainWrapper.standard.string(forKey: "CUSTOMER_ID")
@@ -39,7 +41,11 @@ class AddressViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+     
+        self.configureNavigationBar()
+    }
+    
+    func configureNavigationBar() {
         navigationItem.title = "My Addressess"
         navigationController?.navigationBar.topItem?.title = ""
     }

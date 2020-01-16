@@ -108,10 +108,18 @@ class HomeViewController: UIViewController {
             let statusCode = (response as? HTTPURLResponse)?.statusCode
             
             if error != nil {
+                DispatchQueue.main.async {
+                    //stop animation
+                    self?.manageProgressView(isHidden: false)
+                }
                 return
             }
             
             guard let data = data else {
+                DispatchQueue.main.async {
+                    //stop animation
+                    self?.manageProgressView(isHidden: false)
+                }
                 return
             }
             
@@ -131,14 +139,24 @@ class HomeViewController: UIViewController {
                             self?.configurePageControl(totalPage: self?.homeVC?.sliderimages.first?.count ?? 0)
                         }
                     } else {
-                        
+                        DispatchQueue.main.async {
+                            //stop animation
+                            self?.manageProgressView(isHidden: false)
+                        }
                     }
                 } catch let error {
+                    DispatchQueue.main.async {
+                        //stop animation
+                        self?.manageProgressView(isHidden: false)
+                    }
                     print("failed to decode json \(error.localizedDescription)")
                 }
                 
             } else {
-                
+                DispatchQueue.main.async {
+                    //stop animation
+                    self?.manageProgressView(isHidden: false)
+                }
             }
         }
     }
@@ -212,11 +230,25 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         let productPrice = self.homeVC?.gridproducts[indexPath.row].price ?? 0
         
         cell.otlLblProductName?.text = productName
-        cell.otlLblProductPrice?.text = "\(productPrice)"
+        cell.otlLblProductPrice?.text = "₹ \(productPrice)/-"
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        switch collectionView.tag {
+        case 1:
+            break
+        case 2:
+            //get the download url
+            let gridProduct = self.homeVC?.gridproducts[indexPath.row]
+
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller : ProductListDetailsViewController = storyboard.instantiateViewController(withIdentifier: "PRODUCT_FULL_VIEW_ID") as! ProductListDetailsViewController
+            controller.gridProductDetails = gridProduct
+            
+            self.navigationController?.pushViewController(controller, animated: true)
+        default:
+            break
+        }
     }
     
 }

@@ -162,7 +162,7 @@ extension ShopByCategoryViewController : UICollectionViewDelegate,UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "PRODUCT_DETAILS_ID", sender: self)
+        self.performSegue(withIdentifier: "PRODUCT_LIST_ID", sender: self)
     }
     
 }

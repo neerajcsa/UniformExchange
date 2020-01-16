@@ -9,17 +9,16 @@
 struct HomeVC: Codable {
     var success : String
     
-    struct GridProducts : Codable {
-        var pid : String
-        var name : String
-        var image : String
-        var sku : String
-        var price : Int
-    }
-
     var sliderimages : [[String]]
     var gridproducts : [GridProducts]
 }
 
+struct GridProducts : Codable {
+    var pid : String
+    var name : String
+    var image : String
+    var sku : String
+    var price : Int
+}
 
  

@@ -34,6 +34,8 @@ struct Service {
     static let categoryList = "/pub/api.php?apirequest=catlist"
     static let productList = "/pub/api.php?apirequest=productlist"
     static let productDetails = "/pub/api.php?apirequest=productdetail&prid=%@"
+    //Cart
+    static let cartDetails = "/pub/api.php?apirequest=docartdetail&customerId=53"
     
     //Public
     static let timeoutInterval : TimeInterval = 120

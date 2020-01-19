@@ -28,6 +28,9 @@
 		B5634F2D2399FDAE00E6F702 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5634F2C2399FDAE00E6F702 /* ProductDetailsViewController.swift */; };
 		B5634F2F239CB74D00E6F702 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5634F2E239CB74D00E6F702 /* RegisterUserViewController.swift */; };
 		B5634F31239CC47000E6F702 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5634F30239CC47000E6F702 /* ForgotPasswordViewController.swift */; };
+		B574EAC923D44BA200538456 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B574EAC823D44BA200538456 /* CartViewController.swift */; };
+		B574EACB23D46B4600538456 /* CartTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B574EACA23D46B4600538456 /* CartTableCell.swift */; };
+		B574EACD23D47B4D00538456 /* CartVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B574EACC23D47B4D00538456 /* CartVO.swift */; };
 		B57AD8EA238A6EAF004C9CF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AD8E9238A6EAF004C9CF3 /* AppDelegate.swift */; };
 		B57AD8EC238A6EAF004C9CF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AD8EB238A6EAF004C9CF3 /* SceneDelegate.swift */; };
 		B57AD8F1238A6EAF004C9CF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57AD8EF238A6EAF004C9CF3 /* Main.storyboard */; };
@@ -125,6 +128,9 @@
 		B5634F2C2399FDAE00E6F702 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		B5634F2E239CB74D00E6F702 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		B5634F30239CC47000E6F702 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		B574EAC823D44BA200538456 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		B574EACA23D46B4600538456 /* CartTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableCell.swift; sourceTree = "<group>"; };
+		B574EACC23D47B4D00538456 /* CartVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVO.swift; sourceTree = "<group>"; };
 		B57AD8E6238A6EAF004C9CF3 /* Uniform Exchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uniform Exchange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57AD8E9238A6EAF004C9CF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B57AD8EB238A6EAF004C9CF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +225,7 @@
 				B593895423A60F4900CFAC25 /* AddAddressViewController.swift */,
 				B5E9719B23B44BC100E02A27 /* ProductListDetailsViewController.swift */,
 				B5B0A4BE23CC143900F429F5 /* CustomizeProductDetailsViewController.swift */,
+				B574EAC823D44BA200538456 /* CartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,6 +275,7 @@
 				B504E6CC23940C2C004615E1 /* MenuOption.swift */,
 				B5634F2823996A3200E6F702 /* ProductCategoryVC.swift */,
 				B5E9719923AF87D900E02A27 /* AddressListVO.swift */,
+				B574EACC23D47B4D00538456 /* CartVO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +285,7 @@
 			children = (
 				B5634F2A23996BE900E6F702 /* ProductCategoryCollectionCell.swift */,
 				B5E9719723AF87BB00E02A27 /* AddressTableCell.swift */,
+				B574EACA23D46B4600538456 /* CartTableCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -647,12 +656,15 @@
 				B57AD8EA238A6EAF004C9CF3 /* AppDelegate.swift in Sources */,
 				B57AD94E238AEC47004C9CF3 /* HomeViewController.swift in Sources */,
 				9605F30B23950B41009567DD /* AccountViewController.swift in Sources */,
+				B574EAC923D44BA200538456 /* CartViewController.swift in Sources */,
 				967C24812397BCC80081FCDA /* PickerViewController.swift in Sources */,
 				B57AD930238AEC47004C9CF3 /* LoginViewController.swift in Sources */,
 				B57AD93F238AEC47004C9CF3 /* Configuration.swift in Sources */,
 				B593895523A60F4900CFAC25 /* AddAddressViewController.swift in Sources */,
 				B57AD8EC238A6EAF004C9CF3 /* SceneDelegate.swift in Sources */,
 				B57AD954238AEC47004C9CF3 /* HomeVC.swift in Sources */,
+				B574EACB23D46B4600538456 /* CartTableCell.swift in Sources */,
+				B574EACD23D47B4D00538456 /* CartVO.swift in Sources */,
 				967C247D2397BC840081FCDA /* CustomPresentationController.swift in Sources */,
 				B504E6C32390B30E004615E1 /* DashboardService.swift in Sources */,
 				967C247B2397BC400081FCDA /* CustomPresentationManager.swift in Sources */,

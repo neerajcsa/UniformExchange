@@ -26,6 +26,8 @@ class AddAddressViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var otlProgressView : UIActivityIndicatorView?
     
     var isEditAddress : Bool = false
+    var arrAddressType : [String] = ["Home", "Work", "Other"]
+    var arrStateList : [String] = ["Andaman and Nicobar Islands", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chandigarh", "Chhattisgarh", "Dadra and Nagar Haveli and Daman and Diu", "New Delhi", "Goa", "Gujrat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Ladakh", "Lakshadweep", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Puducherry", "Punjab", "Rajasthan", "Sikkim", "Tamilnadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

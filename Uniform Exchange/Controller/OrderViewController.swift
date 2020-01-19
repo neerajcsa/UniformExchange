@@ -16,11 +16,16 @@ class OrderViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func configureNavigationBar() {
+        //set title
+        navigationItem.title = "My Order"
+        navigationController?.navigationBar.topItem?.title = ""
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationItem.title = "My Order"
-        navigationController?.navigationBar.topItem?.title = ""
+        self.configureNavigationBar()
     }
     
 
